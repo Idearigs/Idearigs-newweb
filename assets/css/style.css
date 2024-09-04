@@ -234,6 +234,8 @@ img {
     color: #666 !important;
 }
 
+
+
 .form-control {
     font-size: 15px;
     height: 60px;
@@ -2152,6 +2154,8 @@ body.dark,
 :: 14.0 PRICE PLAN AREA CSS
 ****************************** */
 .single-price-plan {
+    width: 350px; /* Adjust the width as needed */
+    margin: 0 75px; /* Adds more horizontal spacing between packages */
     -webkit-box-shadow: 0 0.313rem 0.875rem rgba(45, 49, 54, 0.09);
     box-shadow: 0 0.313rem 0.875rem rgba(45, 49, 54, 0.09);
     background-color: #fff;
@@ -2160,6 +2164,15 @@ body.dark,
     transition: all 0.3s ease 0s;
     overflow: hidden;
 }
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Adds space between the cards */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+}
+
+
 
 .plan-title > h3 {
     font-size: 30px;
