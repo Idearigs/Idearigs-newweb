@@ -26,6 +26,24 @@
     <!-- Responsive css -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -39,13 +57,14 @@
                 <div class="spinner"></div>
                 <!-- Loader -->
                 <div class="loader">
+                    <span data-text-preloader="I" class="animated-letters">I</span>
                     <span data-text-preloader="D" class="animated-letters">D</span>
+                    <span data-text-preloader="E" class="animated-letters">E</span>
+                    <span data-text-preloader="A" class="animated-letters">A</span>
+                    <span data-text-preloader="R" class="animated-letters">R</span>
                     <span data-text-preloader="I" class="animated-letters">I</span>
                     <span data-text-preloader="G" class="animated-letters">G</span>
-                    <span data-text-preloader="I" class="animated-letters">I</span>
-                    <span data-text-preloader="M" class="animated-letters">M</span>
-                    <span data-text-preloader="A" class="animated-letters">A</span>
-                    <span data-text-preloader="X" class="animated-letters">X</span>
+                    <span data-text-preloader="S" class="animated-letters">S</span>
                 </div>
                 <p class="fw-5 text-center text-uppercase">Loading</p>
             </div>
@@ -82,126 +101,7 @@
 
     <div class="main overflow-hidden">
         <!-- ***** Header Start ***** -->
-        <header id="header">
-            <!-- Navbar -->
-            <nav data-aos="zoom-out" data-aos-delay="800" class="navbar navbar-expand">
-                <div class="container header">
-                    <!-- Navbar Brand-->
-                    <a class="navbar-brand" href="index.html">
-                        <img class="navbar-brand-regular" src="assets/img/logo/logo-white.png" alt="brand-logo">
-                        <img class="navbar-brand-sticky" src="assets/img/logo/logo.png" alt="sticky brand-logo">
-                    </a>
-                    <div class="ml-auto"></div>
-                    <!-- Navbar -->
-                    <ul class="navbar-nav items">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Home <i class="fas fa-angle-down ml-1"></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">Multi-Page <i class="fas fa-angle-right ml-1"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="index.html" class="nav-link">Homepage 1</a></li>
-                                        <li class="nav-item"><a href="index-2.html" class="nav-link">Homepage 2</a></li>
-                                        <li class="nav-item"><a href="index-3.html" class="nav-link">Homepage 3</a></li>
-                                        <li class="nav-item"><a href="index-4.html" class="nav-link">Homepage 4</a></li>
-                                        <li class="nav-item"><a href="index-5.html" class="nav-link">Homepage 5</a></li>
-                                        <li class="nav-item"><a href="index-6.html" class="nav-link">Homepage 6</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">One-Page <i class="fas fa-angle-right ml-1"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="index-one-page.html" class="nav-link">Homepage 1</a></li>
-                                        <li class="nav-item"><a href="index-2-one-page.html" class="nav-link">Homepage 2</a></li>
-                                        <li class="nav-item"><a href="index-3-one-page.html" class="nav-link">Homepage 3</a></li>
-                                        <li class="nav-item"><a href="index-4-one-page.html" class="nav-link">Homepage 4</a></li>
-                                        <li class="nav-item"><a href="index-5-one-page.html" class="nav-link">Homepage 5</a></li>
-                                        <li class="nav-item"><a href="index-6-one-page.html" class="nav-link">Homepage 6</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="services.html" class="nav-link">Services</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Pages <i class="fas fa-angle-down ml-1"></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                                <li class="nav-item"><a href="services.html" class="nav-link">Our Services</a></li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">Our Portfolio <i class="fas fa-angle-right ml-1"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="portfolio-grid.html" class="nav-link">Portfolio Grid</a></li>
-                                        <li class="nav-item"><a href="portfolio-minimal.html" class="nav-link">Portfolio Minimal</a></li>
-                                        <li class="nav-item"><a href="portfolio-no-gap.html" class="nav-link">Portfolio No Gap</a></li>
-                                        <li class="nav-item"><a href="portfolio-masonry.html" class="nav-link">Portfolio Masonry</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a href="team.html" class="nav-link">Our Team</a></li>
-                                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                                <li class="nav-item"><a href="404.html" class="nav-link">404</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Blog Pages <i class="fas fa-angle-down ml-1"></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">Blog Grid <i class="fas fa-angle-right ml-1"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="blog-two-column.html" class="nav-link">Grid 2 Column</a></li>
-                                        <li class="nav-item"><a href="blog-three-column.html" class="nav-link">Grid 3 Column</a></li>
-                                        <li class="nav-item"><a href="blog-left-sidebar.html" class="nav-link">Left Sidebar</a></li>
-                                        <li class="nav-item"><a href="blog-right-sidebar.html" class="nav-link">Right Sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">Blog Single <i class="fas fa-angle-right ml-1"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="blog-details-left-sidebar.html" class="nav-link">Single Left Sidebar</a></li>
-                                        <li class="nav-item"><a href="blog-details-right-sidebar.html" class="nav-link">Single Right Sidebar</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!-- Navbar Icons -->
-                    <ul class="navbar-nav icons">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#search">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item social">
-                            <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="nav-item social">
-                            <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
-                        </li>
-                    </ul>
-
-                    <!-- Navbar Toggler -->
-                    <ul class="navbar-nav toggle">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#menu">
-                                <i class="fas fa-bars toggle-icon m-0"></i>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <!-- Navbar Action Button -->
-                    <ul class="navbar-nav action">
-                        <li class="nav-item ml-3">
-                            <a href="#" class="btn ml-lg-auto btn-bordered-white"><i class="fas fa-paper-plane contact-icon mr-md-2"></i>Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        <header id="header" ></header>
         <!-- ***** Header End ***** -->
 
         <!-- ***** Breadcrumb Area Start ***** -->
@@ -214,7 +114,7 @@
                             <h2 class="text-white text-uppercase mb-3">Contact Us</h2>
                             <ol class="breadcrumb d-flex justify-content-center">
                                 <li class="breadcrumb-item"><a class="text-uppercase text-white" href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a class="text-uppercase text-white" href="#">Pages</a></li>
+                                
                                 <li class="breadcrumb-item text-white active">Contact</li>
                             </ol>
                         </div>
@@ -232,9 +132,10 @@
                         <!-- Section Heading -->
                         <div class="section-heading text-center mb-3">
                             <h2>Let's connect!</h2>
-                            <p class="d-none d-sm-block mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
-                            <p class="d-block d-sm-none mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p>
+                            <p class="d-none d-sm-block mt-4">We're eager to hear from you and explore how we can collaborate. Whether you have a question, a project in mind, or just want to say hello, we're here to help. Let's work together to bring your ideas to life.</p>
+                            <p class="d-block d-sm-none mt-4">Have a project or question? We're here to connect and help you succeed.</p>
                         </div>
+                        
                         <!-- Contact Us -->
                         <div class="contact-us">
                             <ul>
@@ -242,20 +143,20 @@
                                 <li class="contact-info color-1 bg-hover active hover-bottom text-center p-5 m-3">
                                     <span><i class="fas fa-mobile-alt fa-3x"></i></span>
                                     <a class="d-block my-2" href="#">
-                                        <h3>+89 (0) 2354 5470091</h3>
+                                        <h3>+94 (701612176)</h3>
                                     </a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <p>Direct contact Futhermore detiails.</p>
                                 </li>
                                 <!-- Contact Info -->
                                 <li class="contact-info color-3 bg-hover active hover-bottom text-center p-5 m-3">
                                     <span><i class="fas fa-envelope-open-text fa-3x"></i></span>
                                     <a class="d-none d-sm-block my-2" href="#">
-                                        <h3>mail@company.com</h3>
+                                        <h3>info@idearigs.com</h3>
                                     </a>
                                     <a class="d-block d-sm-none my-2" href="#">
-                                        <h3>mail@your company.com</h3>
+                                        <h3>info@idearigs.com</h3>
                                     </a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <p>Send a mail we will be in touch</p>
                                 </li>
                             </ul>
                         </div>
@@ -305,89 +206,7 @@
         <!--====== Map Area End ======-->
 
         <!--====== Footer Area Start ======-->
-        <footer class="section footer-area">
-            <!-- Footer Top -->
-            <div class="footer-top ptb_100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <!-- Footer Items -->
-                            <div class="footer-items">
-                                <!-- Footer Title -->
-                                <h3 class="footer-title text-uppercase mb-2">About Us</h3>
-                                <ul>
-                                    <li class="py-2"><a class="text-black-50" href="#">Company Profile</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Testimonials</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Careers</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Partners</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Affiliate Program</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <!-- Footer Items -->
-                            <div class="footer-items">
-                                <!-- Footer Title -->
-                                <h3 class="footer-title text-uppercase mb-2">Services</h3>
-                                <ul>
-                                    <li class="py-2"><a class="text-black-50" href="#">Web Application</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Product Management</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">User Interaction Design</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">UX Consultant</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Social Media Marketing</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <!-- Footer Items -->
-                            <div class="footer-items">
-                                <!-- Footer Title -->
-                                <h3 class="footer-title text-uppercase mb-2">Support</h3>
-                                <ul>
-                                    <li class="py-2"><a class="text-black-50" href="#">Frequently Asked</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Terms &amp; Conditions</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Privacy Policy</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Help Center</a></li>
-                                    <li class="py-2"><a class="text-black-50" href="#">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <!-- Footer Items -->
-                            <div class="footer-items">
-                                <!-- Footer Title -->
-                                <h3 class="footer-title text-uppercase mb-2">Follow Us</h3>
-                                <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.</p>
-                                <!-- Social Icons -->
-                                <ul class="social-icons list-inline pt-2">
-                                    <li class="list-inline-item px-1"><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                    <li class="list-inline-item px-1"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li class="list-inline-item px-1"><a href="#"><i class="fab fa-google-plus"></i></a></li>
-                                    <li class="list-inline-item px-1"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li class="list-inline-item px-1"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Bottom -->
-            <div class="footer-bottom bg-grey">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- Copyright Area -->
-                            <div class="copyright-area d-flex flex-wrap justify-content-center justify-content-sm-between text-center py-4">
-                                <!-- Copyright Left -->
-                                <div class="copyright-left">&copy; Copyrights 2020 Digimax All rights reserved.</div>
-                                <!-- Copyright Right -->
-                                <div class="copyright-right">Made with <i class="fas fa-heart"></i> By <a href="#">Themeland</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <footer  id="footer" class="section footer-area"></footer>
         <!--====== Footer Area End ======-->
 
         <!--====== Modal Search Area Start ======-->
