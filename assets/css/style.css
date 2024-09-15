@@ -1006,7 +1006,7 @@ header {
 
 .navbar-sticky {
     top: 0;
-    background-color: #fff;
+    background-color: #222423;
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
     -webkit-transition: all .15s ease-out 0s !important;
@@ -1095,7 +1095,7 @@ header {
 
 .navbar-expand.navbar-sticky .navbar-nav .nav-link,
 .navbar-expand.navbar-light .navbar-nav .nav-link {
-    color: #2c2e30;
+    color: #ffffff;
 }
 
 .navbar-expand .navbar-nav .dropdown-menu .nav-link {

@@ -3,11 +3,16 @@
 	<url>
 		<loc>https://www.idearigs.com</loc>
 		<priority>1.00</priority>
-		<lastmod>2024-09-08</lastmod>
+		<lastmod>2024-09-15</lastmod>
 	</url>
 	<url>
 		<loc>https://www.idearigs.com/Idearigs-portfolio.html</loc>
 		<priority>0.90</priority>
+		<lastmod>2024-09-08</lastmod>
+	</url>
+	<url>
+		<loc>https://www.idearigs.com/about.html</loc>
+		<priority>0.85</priority>
 		<lastmod>2024-09-08</lastmod>
 	</url>
 	<url>
@@ -19,11 +24,6 @@
 		<loc>https://www.idearigs.com/contact.html</loc>
 		<priority>0.80</priority>
 		<lastmod>2024-09-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.idearigs.com/about.html</loc>
-		<priority>0.85</priority>
-		<lastmod>2024-09-08</lastmod>
 	</url>
 	<url>
 		<loc>https://www.idearigs.com/404.html</loc>
