@@ -31,7 +31,7 @@ jobs:
           ssh -i ~/.ssh/id_rsa \
               -o StrictHostKeyChecking=no \
               ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-              "cd /var/www/html && git reset --hard && git clean -fd && git pull origin main"
+              "cd /var/www/idearigs.com/public_html && git reset --hard && git clean -fd && git pull origin main"
 
       # Step 4: Cleanup SSH keys (optional)
       - name: Cleanup SSH keys
