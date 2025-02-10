@@ -1,38 +1,26 @@
-name: Deploy to Remote Server
+name: Deploy to VPS
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   deploy:
-    name: Deploy to Server
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Install SSH keys
-      - name: Install SSH keys
-        run: |
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          printf "%s" "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      # Step 3: Connect to the server and pull the latest code
-      - name: Connect and Pull Latest Code
-        run: |
-          ssh -i ~/.ssh/id_rsa \
-              -o StrictHostKeyChecking=no \
-              ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-              "cd /var/www/idearigs.com/public_html && git reset --hard && git clean -fd && git pull origin main"
-
-      # Step 4: Cleanup SSH keys (optional)
-      - name: Cleanup SSH keys
-        run: rm -rf ~/.ssh
+      - name: Deploy via SSH using Password
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          port: 22
+          script: |
+            cd /var/www/idearigs.com/public_html
+            git pull origin main
+            systemctl restart apache2
